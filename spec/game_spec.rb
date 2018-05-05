@@ -1,5 +1,6 @@
 require 'spec_helper'
 require_relative '../lib/game'
+require 'byebug'
 
 RSpec.describe Game do
   let(:ip_info) { instance_double('IpInfo', latitude: 10) }
@@ -8,9 +9,9 @@ RSpec.describe Game do
   end
 
   describe '#run' do
-    it 'returns latitude of provided ip address' do
+    it 'should return Queen class structure of unique coordinates on which a Queen will sit' do
       value = Game.new.run.class
-      expect([Fixnum]).to include(value)
+      expect([Array]).to include(value)
     end
   end
 end
