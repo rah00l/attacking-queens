@@ -1,8 +1,8 @@
 require_relative 'ip_info'
-require 'board'
+require_relative 'board'
 class Game
   def initialize(ip = nil)
-    @ip = ip
+    @ip = ip || '8.8.8.8'
   end
 
   def run
@@ -12,7 +12,7 @@ class Game
     board = Board.new(board_size)
     board.assign_pieces
 
+    result = board.attacking_coordinates
+    result.any? ? result : 'true'
   end
 end
-
-Game.new('8.8.8.8').run

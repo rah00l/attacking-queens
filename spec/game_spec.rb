@@ -9,9 +9,9 @@ RSpec.describe Game do
   end
 
   describe '#run' do
-    it 'should return Queen class structure of unique coordinates on which a Queen will sit' do
+    it 'returns either an array or string' do
       value = Game.new.run.class
-      expect([Array]).to include(value)
+      expect([String, Array]).to include(value)
     end
   end
 end

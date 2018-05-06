@@ -1,4 +1,5 @@
 require_relative 'queen'
+require_relative 'sliding_pieces'
 require 'byebug'
 
 class Board
@@ -16,7 +17,18 @@ class Board
     end
   end
 
+  def attacking_coordinates
+    attacking_pairs.map do |pair|
+      pair.map(&:coordinates)
+    end
+  end
+
   private
+
+  # All possible pairs of pieces
+  def pairs
+    @pieces.combination(2).to_a
+  end
 
   def assign_unique_pieces
     x = random_in_range
@@ -27,8 +39,13 @@ class Board
       piece.coordinates = [x, y]
       return piece
     end
-
     assign_unique_pieces
+  end
+
+  def attacking_pairs
+    pairs.select do |pair|
+      SlidingPieces.new(pair).attacking?
+    end
   end
 
   def range
