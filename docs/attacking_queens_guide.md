@@ -16,24 +16,24 @@ return each pair of attacking Queens.
 
 ## Contents
 
-* [Program Output](#program output)
+* Program Output
+* Testcase Output
 * [Wiki](#wiki)
-* [Testcase Output](#testcase output)
 * [Responses](#responses)
 
 ## Program Output
 
 ![Program output](/docs/output.png?raw=true "Title")
 
+## Testcase Output
+
+![Testcase output](/docs/test_run_output.png?raw=true "Title")
+
 ## Wiki
 
 See the list of [available
 methods](https://github.com/rah00l/attacking-queens/wiki/Documentation) in the
 wiki.
-
-## Testcase Output
-
-![Testcase output](/docs/test_run_output.png?raw=true "Title")
 
 ## Responses
 
