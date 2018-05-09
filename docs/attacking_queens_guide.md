@@ -12,7 +12,7 @@ return each pair of attacking Queens.
 
 ## Code
 
-    $ git clone https://github.com/rah00l/attacking-queens
+  $ git clone https://github.com/rah00l/attacking-queens
 
 ## Contents
 
